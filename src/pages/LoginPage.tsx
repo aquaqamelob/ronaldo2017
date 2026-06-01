@@ -1,4 +1,4 @@
-import { Logo } from '@/components/logo'
+// import { Logo } from '@/components/logo'
 import { Button } from '@/components/button'
 import { Checkbox, CheckboxField } from '@/components/checkbox'
 import { Field, Label } from '@/components/fieldset'
