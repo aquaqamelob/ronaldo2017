@@ -4,7 +4,7 @@ import { Divider } from '@/components/divider'
 import { Subheading } from '@/components/heading'
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/table'
 import { Text } from '@/components/text'
-import { ChartPlaceholder } from '@/features/medprice/ui/ChartPlaceholder'
+import { PriceIndexTrendChart } from '@/features/medprice/ui/PriceIndexTrendChart'
 import { KpiStats } from '@/features/medprice/ui/KpiStats'
 import { Link } from '@/components/link'
 import type { HospitalStats, MaterialPriceRecord } from '@/types/medprice'
@@ -124,7 +124,7 @@ export function DashboardView({ data, stats, onSelectMaterial }: DashboardViewPr
       <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
         <div className="rounded-lg p-6 ring-1 ring-zinc-950/10 dark:ring-white/10">
           <Subheading className="mb-4">Trend indeksu cenowego</Subheading>
-          <ChartPlaceholder title="Trend indeksu cenowego" />
+          <PriceIndexTrendChart />
         </div>
 
         <div className="rounded-lg p-6 ring-1 ring-zinc-950/10 dark:ring-white/10">

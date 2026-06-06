@@ -1,6 +1,6 @@
 import { Badge } from '@/components/badge'
 import { Button } from '@/components/button'
-import { Input } from '@/components/input'
+import { Input, InputGroup } from '@/components/input'
 import { useMedPrice } from '@/context/MedPriceProvider'
 import { FunnelIcon, MagnifyingGlassIcon } from '@heroicons/react/20/solid'
 import { ArrowDownTrayIcon } from '@heroicons/react/16/solid'
@@ -41,14 +41,15 @@ export function MaterialsToolbar() {
   return (
     <div className="space-y-4">
       <div className="flex flex-col gap-3 sm:flex-row sm:items-center">
-        <div className="relative min-w-0 flex-1">
-          <MagnifyingGlassIcon className="pointer-events-none absolute top-1/2 left-3 size-5 -translate-y-1/2 text-zinc-400" />
-          <Input
-            className="pl-10"
-            placeholder="Szukaj materiału, synonimu lub producenta…"
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
+        <div className="min-w-0 flex-1">
+          <InputGroup>
+            <MagnifyingGlassIcon data-slot="icon" />
+            <Input
+              placeholder="Szukaj materiału, synonimu lub producenta…"
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
+          </InputGroup>
         </div>
         <div className="flex shrink-0 gap-2">
           <Button outline onClick={() => setIsFilterOpen(true)}>
